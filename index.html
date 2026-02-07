@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ShieldAuth Secure Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- LOGIN SECTION -->
+  <div class="container" id="loginBox">
+    <h2>🔐 ShieldAuth Login</h2>
+
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <button id="loginBtn">Login</button>
+
+    <p id="message"></p>
+    <p class="hint">Demo credentials: <b>admin / admin123</b></p>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div class="container hidden" id="dashboardBox">
+    <h2>✅ Dashboard</h2>
+    <p>Welcome, <span id="userDisplay"></span></p>
+    <p class="role">Role: <span id="roleDisplay"></span></p>
+
+    <div class="admin-panel hidden" id="adminPanel">
+      <h3>🔒 Admin Area</h3>
+      <p>Only admins can see this section.</p>
+    </div>
+
+    <button id="logoutBtn" class="logout">Logout</button>
+  </div>
+
+  <!-- SECURITY LOGS -->
+  <div class="container hidden" id="logsBox">
+    <h3>🛡 Security Logs</h3>
+    <ul id="logsList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
